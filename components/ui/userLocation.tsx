@@ -5,7 +5,11 @@ interface Location {
     longitude: number;
 }
 
-const GeoLocationComponent: React.FC = () => {
+interface GeoLocationComponentProps {
+    setUserLocation: (location:  [number, number] | null) => void; // Prop to update user location
+}
+
+const GeoLocationComponent: React.FC<GeoLocationComponentProps> = ({ setUserLocation }) => {
     const [location, setLocation] = useState<Location | null>(null);
     const [error, setError] = useState<string | null>(null);
 
@@ -15,6 +19,7 @@ const GeoLocationComponent: React.FC = () => {
                 (position: GeolocationPosition) => {
                     const { latitude, longitude } = position.coords;
                     setLocation({ latitude, longitude });
+                    setUserLocation([longitude, latitude]); // Set user location
                 },
                 (err: GeolocationPositionError) => {
                     setError(err.message);
@@ -23,14 +28,14 @@ const GeoLocationComponent: React.FC = () => {
         } else {
             setError("Geolocation is not supported by this browser.");
         }
-    }, []);
+    }, [setUserLocation]);
 
     return (
         <div>
             {error && <p>Error: {error}</p>}
             {location && (
                 <p>
-                    Latitude: {location.latitude}, Longitude: {location.longitude}
+                   
                 </p>
             )}
             {!error && !location && <p>Loading location...</p>}
