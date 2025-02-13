@@ -3,7 +3,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Head from 'next/head';
 import { Metadata } from "next";
-import Script from "next/script";
+
 
 export const metadata: Metadata = {
   title: 'Is this east Berlin or west Berlin?',
@@ -20,11 +20,11 @@ export default function RootLayout({
       <Head>
       <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Script
+      <script
       async
       src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7556699808711569`}
       crossOrigin="anonymous"
-      strategy="afterInteractive"
+      
     />
       <body>
         {children}
