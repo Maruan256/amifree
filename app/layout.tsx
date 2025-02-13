@@ -1,5 +1,4 @@
 
-import GoogleAdsense from "@/components/ui/googleAdSense";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Head from 'next/head';
