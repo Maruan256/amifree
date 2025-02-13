@@ -2,7 +2,6 @@
 import GoogleAdsense from "@/components/ui/googleAdSense";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
-import Head from 'next/head';
 
 import { Metadata } from "next";
 
@@ -18,7 +17,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head><meta name="google-adsense-account" content="ca-pub-7556699808711569" /></Head>
       <body>
         {children}
         <Analytics />
