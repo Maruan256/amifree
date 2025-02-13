@@ -1,6 +1,7 @@
 
 import GoogleAdsense from "@/components/ui/googleAdSense";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react"
 
 import { Metadata } from "next";
 
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
+        <Analytics />
       </body>
       <GoogleAdsense pId="7556699808711569"></GoogleAdsense>
     </html>
