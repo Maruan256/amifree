@@ -23,8 +23,8 @@ export default function RootLayout({
       <body>
         {children}
         <Analytics />
-      </body>
       <GoogleAdsense pId="7556699808711569"></GoogleAdsense>
+      </body>
     </html>
   );
 }
