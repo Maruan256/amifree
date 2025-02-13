@@ -19,13 +19,13 @@ export default function RootLayout({
     <html lang="en">
       <Head>
       <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Script
       async
       src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7556699808711569`}
       crossOrigin="anonymous"
       strategy="afterInteractive"
     />
-      </Head>
       <body>
         {children}
         <Analytics />
