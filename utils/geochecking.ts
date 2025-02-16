@@ -40,12 +40,12 @@ export function checkCoordinates(
     }
 
     if (isInWestBerlin) {
-        return 'You are in Westberlin, have you guessed it?';
+        return 'You are in Westberlin.';
     }
     
     if (isInOtherBoundary) {
-        return 'You are in Eastberlin, have you guessed it?';
+        return 'You are in Eastberlin.';
     }
     
-    return 'You are not even in Berlin!! Take a nap and come to your senses ...';
+    return 'You are not even in Berlin!!';
 }
