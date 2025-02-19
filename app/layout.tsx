@@ -3,7 +3,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Head from 'next/head';
 import { Metadata } from "next";
-
+import { PostHogProvider } from "./providers";
 
 export const metadata: Metadata = {
   title: 'Is this east Berlin or west Berlin?',
@@ -27,8 +27,11 @@ export default function RootLayout({
       
     />
       <body>
-        {children}
+        <PostHogProvider>
+          {children}
         <Analytics />
+        </PostHogProvider>
+        
       </body>
     </html>
   );
