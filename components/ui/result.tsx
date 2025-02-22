@@ -50,7 +50,7 @@ const Result: React.FC<ResultProps> = ({ userLocation }) => {
             {error && <p>{error}</p>}
             {cityPartNames.length > 0 ? (
                 <div>  
-                    <p className='m-12'>{resultGlobal}</p>
+                    <p className='mt-20'>{resultGlobal}</p>
                 </div> // Display the result
             ) : (
                 <p>Loading...</p> // Show loading indicator while fetching
