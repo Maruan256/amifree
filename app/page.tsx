@@ -12,7 +12,11 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col justify-center items-center h-screen bg-gray-100">
-        <Button size={'default'} onClick={() => setClicked(!clicked)} className="absolute">is this east berlin</Button>
+        <div className="text-center">
+          <h1 className="text-3xl pb-8">Is this east Berlin or west Berlin?</h1>
+        <p className="text-xl pb-20">Have you ever wondered on which side of the Berlin Wall you are? Well, wonder no more! Here is your answer!</p>
+        </div>
+        <Button size={'default'} onClick={() => setClicked(!clicked)} className="">is this east berlin</Button>
         {clicked && (
           <GeoLocationComponent setUserLocation={setUserLocation} /> // Pass setUserLocation as prop
         )}
