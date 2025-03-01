@@ -21,6 +21,10 @@ export default function Home() {
           <GeoLocationComponent setUserLocation={setUserLocation} /> // Pass setUserLocation as prop
         )}
         <Result userLocation={userLocation} /> {/* Pass userLocation to Result */}
+
+      <div className="absolute bottom-10 p-6">
+        <p>created by Benny Blitz©, <a href="mailto:blitzbenny8@gmail.com" className="decoration-transparent text-slate-700">contact</a>  me if you see an Issue, I rarely come to east berlin so my testing capabilitys are quite limited ...</p>
+      </div>
       </div>
     </>
   );
