@@ -18,12 +18,12 @@ export default function Home() {
         </div>
         <Button size={'default'} onClick={() => setClicked(!clicked)} className="">is this east berlin</Button>
         {clicked && (
-          <GeoLocationComponent setUserLocation={setUserLocation} /> // Pass setUserLocation as prop
+          <GeoLocationComponent setUserLocation={setUserLocation} /> 
         )}
         <Result userLocation={userLocation} /> {/* Pass userLocation to Result */}
 
-      <div className="absolute bottom-10 p-6">
-        <p>created by Benny Blitz©, <a href="mailto:blitzbenny8@gmail.com" className="decoration-transparent text-slate-700">contact</a>  me if you see an Issue, I rarely come to east berlin so my testing capabilitys are quite limited ...</p>
+      <div className="absolute bottom-2 p-2">
+        <p className="text-gray-400">created by Benny Blitz©, <a href="mailto:blitzbenny8@gmail.com" className="decoration-transparent text-slate-700">contact</a>  me if you see an Issue, I rarely come to east berlin so my testing capabilitys are quite limited ...</p>
       </div>
       </div>
     </>
