@@ -40,11 +40,11 @@ export function checkCoordinates(
     }
 
     if (isInWestBerlin) {
-        return 'You are in Westberlin.';
+        return 'You are in West-Berlin.';
     }
     
     if (isInOtherBoundary) {
-        return 'You are in Eastberlin.';
+        return 'You are in East-Berlin.';
     }
     
     return 'You are not even in Berlin!!';
